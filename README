@@ -2,6 +2,17 @@ Zimodem 4.0.0 (C)2016-2023 Bo Zimmerman
 Please read the LICENSE file for license information
 Please read the NOTICE file for credits information
 
+Insanity213's Fork Notes:
+-------------------------
+This section is taken from dabonetn's repo, I just wanted to play with the 4.0.0 code base.  I'll make the same tweaks based on dabonetn's notes.
+
+In Zimodem.ino set 19200 baud as standard, and get rid of the signal inversion while using a ESP8266 module.
+
+In Zcommand.ino I will replace update URL with my own <remember to come back and add it>
+
+Telnet protocol on atdt dialing has been disabled by default ""telnetSupport=false;""
+To renable telnet translation by the modem instead of the terminal, use the command ats62=1.
+
 Intro:
 ------
 This firmware code provides an api for communication between a serial terminal and the ESP8266 or ESP32.  It simulates the old-style Hayes "AT" commands, so that the ESP8266 appears to the terminal as if it were a Hayes modem.  These "AT" commands may then be issued to the ESP8266 in order to force it to connect to a wireless access point, and from there to make one or more manageable connections to the internet.  It also includes a streaming serial "telnet" mode, and server/port listener capabilities.
