@@ -128,7 +128,7 @@ void ZCommand::setConfigDefaults()
 {
   doEcho=true;
   autoStreamMode=false;
-  telnetSupport=true;
+  telnetSupport=false;
   preserveListeners=false;
   ringCounter=1;
   serial.setFlowControlType(DEFAULT_FCT);
@@ -1298,7 +1298,7 @@ ZResult ZCommand::doUpdateFirmware(int vval, uint8_t *vbuf, int vlen, bool isNum
   char *updaterHost = "192.168.1.10";
   int updaterPort = 8080;
 #else
-  char *updaterHost = "www.zimmers.net";
+  char *updaterHost = "www.hellbent.cc";
   int updaterPort = 80;
 #endif
 #ifdef ZIMODEM_ESP32
